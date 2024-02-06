@@ -2,7 +2,7 @@
  * @author: Hansel
  * @email: heshenghong.hsh@gongdao.com
  * @create: 2023-01-28 11:30:13
- * @modify: 2023-10-11 16:10:40
+ * @modify: 2023-10-11 16:25:08
  * @desc: 
 -->
 <!DOCTYPE html>
@@ -115,8 +115,6 @@
       const colorRed = new THREE.Color("#CB356B");
       const t = 0.9; // 渐变系数
       let isSpin = false;
-      let heartColor = "vec3(0.576,0.196,0.333)";
-      let heartEdgeColor = "vec3(1.,0.729,0.788)"; //心形边缘颜色 GLSL vec3色值 可以在这里转换 https://airtightinteractive.com/util/hex-to-glsl/
       const color = colorWhite.lerp(colorRed, t);
       let particleSize = 3; // 粒子大小
       let particleLoose = 70; // 粒子数量
