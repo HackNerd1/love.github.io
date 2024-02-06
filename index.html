@@ -2,7 +2,7 @@
  * @author: Hansel
  * @email: heshenghong.hsh@gongdao.com
  * @create: 2023-01-28 11:30:13
- * @modify: 2023-10-11 16:25:08
+ * @modify: 2024-02-06 14:48:36
  * @desc: 
 -->
 <!DOCTYPE html>
@@ -106,6 +106,7 @@
       }
     </script>
     <script>
+      const radio = document.body.clientWidth / 1504;
       const textureLoader = new THREE.TextureLoader();
       const heartTexture = textureLoader.load(
         "https://img.alicdn.com/imgextra/i4/O1CN01mfflmF1Dc8MAh8I5d_!!6000000000236-2-tps-512-512.png"
@@ -245,14 +246,16 @@
         renderer.render(scene, camera);
       });
 
+      // console.log(radio);
+
       setTimeout(() => {
         isSpin = true;
-        zoom(2, 10, 45);
+        zoom(2 / radio, 10, 45);
       }, 500);
 
       setTimeout(() => {
         isSpin = false;
-        zoom(-2, 10, 45);
+        zoom(-2 / radio, 10, 45);
         showText();
       }, 5000);
 
