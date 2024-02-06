@@ -2,7 +2,7 @@
  * @author: Hansel
  * @email: heshenghong.hsh@gongdao.com
  * @create: 2023-01-28 11:30:13
- * @modify: 2024-02-06 14:51:09
+ * @modify: 2024-02-06 15:00:04
  * @desc: 
 -->
 <!DOCTYPE html>
@@ -128,7 +128,7 @@
       let pixelRatio = 4; // 如果觉得卡就调小点
 
       let scene = new THREE.Scene();
-      let camera = new THREE.PerspectiveCamera(50, 1, 1, 1000);
+      let camera = new THREE.PerspectiveCamera(50, document.body.clientWidth / document.body.clientHeight, 1, 1000);
       camera.position.set(0, 0, 100).setLength(15);
       let renderer = new THREE.WebGLRenderer({
         antialias: true,
