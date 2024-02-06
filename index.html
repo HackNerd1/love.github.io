@@ -2,7 +2,7 @@
  * @author: Hansel
  * @email: heshenghong.hsh@gongdao.com
  * @create: 2023-01-28 11:30:13
- * @modify: 2024-02-06 14:48:36
+ * @modify: 2024-02-06 14:51:09
  * @desc: 
 -->
 <!DOCTYPE html>
@@ -106,7 +106,8 @@
       }
     </script>
     <script>
-      const radio = document.body.clientWidth / 1504;
+      const radio =
+        document.body.clientWidth > 1504 ? 1504 / document.body.clientWidth : document.body.clientWidth / 1504;
       const textureLoader = new THREE.TextureLoader();
       const heartTexture = textureLoader.load(
         "https://img.alicdn.com/imgextra/i4/O1CN01mfflmF1Dc8MAh8I5d_!!6000000000236-2-tps-512-512.png"
